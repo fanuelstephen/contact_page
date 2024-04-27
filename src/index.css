@@ -17,36 +17,50 @@ body {
   margin: 0;
 }
 .navbar {
-  background-color: #efefef;
+  position: fixed;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   padding: 30px;
   text-align: center;
-  overflow: hidden;
+  background-color: #fff;
+  z-index: 99999;
+  margin-bottom: 3rem;
+}
+.side {
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  grid-column: span 4;
+  padding: 5px;
+  margin-top: 8rem;
+  overflow-y: scroll;
+}
+.main {
+  grid-column: span 8;
+  padding: 20px;
+  position: fixed;
+  margin-left: 30rem;
+  margin-top: 10rem;
+}
+
+.main-body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 @media only screen and (min-width: 320px) {
+  .main {
+    margin-left: 7rem;
+  }
+  .side {
+    margin-top: 4rem;
+  }
   .navbar h1 {
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 10px;
   }
 
-  .main-body {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-  }
-  .side {
-    grid-column: span 4;
-    background-color: #e4e4e4;
-    height: 100vh;
-    padding: 5px;
-  }
-  .main {
-    grid-column: span 8;
-    height: 100vh;
-    padding: 20px;
-  }
   .sidebar-search {
-    margin-bottom: 10px;
+    margin-bottom: -8px;
   }
 
   .siderbar-icon {
@@ -76,6 +90,7 @@ body {
   .search {
     display: inline-block;
     position: relative;
+    margin: 1rem 0;
   }
 
   .search input[type="text"] {
@@ -248,7 +263,7 @@ body {
   }
   .contact-description p {
     font-size: 9px;
-    line-height: 3;
+    line-height: 1.2;
   }
   .btn {
     font-size: 9px;
@@ -256,6 +271,12 @@ body {
   }
 }
 @media only screen and (min-width: 425px) {
+  .main {
+    margin-left: 9rem;
+  }
+  .side {
+    margin-top: 4rem;
+  }
   .navbar h1 {
     text-transform: uppercase;
     font-size: 13px;
@@ -314,6 +335,12 @@ body {
 }
 
 @media only screen and (min-width: 640px) {
+  .main {
+    margin-left: 13rem;
+  }
+  .side {
+    margin-top: 5rem;
+  }
   .navbar h1 {
     text-transform: uppercase;
     font-size: 25px;
@@ -358,6 +385,12 @@ body {
   }
 }
 @media only screen and (min-width: 768px) {
+  .main {
+    margin-left: 17rem;
+  }
+  .side {
+    margin-top: 6rem;
+  }
   .navbar h1 {
     text-transform: uppercase;
     font-size: 35px;
@@ -401,6 +434,12 @@ body {
   }
 }
 @media only screen and (min-width: 900px) {
+  .main {
+    margin-left: 19rem;
+  }
+  .side {
+    margin-top: 7rem;
+  }
   .search input[type="text"] {
     width: 243px;
     padding: 15px 23px;
@@ -440,6 +479,12 @@ body {
   }
 }
 @media only screen and (min-width: 1024px) {
+  .main {
+    margin-left: 21rem;
+  }
+  .side {
+    margin-top: 7rem;
+  }
   .search input[type="text"] {
     width: 285px;
   }
@@ -470,5 +515,43 @@ body {
 
   .navbar h1 {
     font-size: 56px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .main {
+    margin-left: 27rem;
+  }
+  .side {
+    margin-top: 7rem;
+  }
+  .search input[type="text"] {
+    width: 369px;
+    padding: 22px 24px;
+    font-size: 23px;
+  }
+  .search button[type="submit"] {
+    padding: 23px 55px;
+    font-size: 22px;
+  }
+  .contact_list ul li a {
+    font-size: 45px;
+    line-height: 1.7;
+  }
+  .img {
+    width: 410px;
+    height: 410px;
+    border-radius: 207px;
+  }
+  .contact-description h3 {
+    font-size: 47px;
+    margin-bottom: 13px;
+  }
+  .contact-description p {
+    font-size: 29px;
+    line-height: 1.5;
+  }
+  .btn {
+    font-size: 25px;
+    padding: 16px 54px;
   }
 }
