@@ -49,6 +49,7 @@ body {
 @media only screen and (min-width: 320px) {
   .main {
     margin-left: 7rem;
+    margin-top: 1rem;
   }
   .side {
     margin-top: 4rem;
@@ -240,6 +241,9 @@ body {
   }
 }
 @media only screen and (min-width: 375px) {
+  .main {
+    margin-top: 1rem;
+  }
   .search input[type="text"] {
     width: 98px;
     padding: 7px 9px;
@@ -273,6 +277,7 @@ body {
 @media only screen and (min-width: 425px) {
   .main {
     margin-left: 9rem;
+    margin-top: 1rem;
   }
   .side {
     margin-top: 4rem;
@@ -337,6 +342,7 @@ body {
 @media only screen and (min-width: 640px) {
   .main {
     margin-left: 13rem;
+    margin-top: 1rem;
   }
   .side {
     margin-top: 5rem;
@@ -387,6 +393,7 @@ body {
 @media only screen and (min-width: 768px) {
   .main {
     margin-left: 17rem;
+    margin-top: 3rem;
   }
   .side {
     margin-top: 6rem;
@@ -436,6 +443,7 @@ body {
 @media only screen and (min-width: 900px) {
   .main {
     margin-left: 19rem;
+    margin-top: 4rem;
   }
   .side {
     margin-top: 7rem;
@@ -481,6 +489,7 @@ body {
 @media only screen and (min-width: 1024px) {
   .main {
     margin-left: 21rem;
+    margin-top: 5rem;
   }
   .side {
     margin-top: 7rem;
@@ -519,7 +528,8 @@ body {
 }
 @media only screen and (min-width: 1280px) {
   .main {
-    margin-left: 27rem;
+    margin-left: 31rem;
+    margin-top: 6rem;
   }
   .side {
     margin-top: 7rem;
