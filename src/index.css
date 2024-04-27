@@ -1,13 +1,221 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* from the other side */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (min-width: 320px) {
+  .navbar {
+    background-color: #efefef;
+    padding: 30px;
+    text-align: center;
+  }
+  .navbar h1 {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 10px;
+  }
+
+  .main-body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .side {
+    grid-column: span 4;
+    background-color: #e4e4e4;
+    height: 100vh;
+    padding: 5px;
+  }
+  .main {
+    grid-column: span 8;
+    height: 100vh;
+    padding: 20px;
+  }
+  .sidebar-search {
+    margin-bottom: 10px;
+  }
+
+  .siderbar-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1px;
+  }
+  .icon {
+    font-size: 24px;
+    cursor: pointer;
+    text-align: right;
+  }
+  .hide {
+    transform: translateX(-228px);
+    transition: all 0.5s ease-in;
+  }
+  .show {
+    transform: translateX(0px);
+    transition: all 0.5s ease-in;
+  }
+  /* search */
+  .search {
+    display: inline-block;
+    position: relative;
+  }
+
+  .search input[type="text"] {
+    width: 83px;
+    padding: 6px 7px;
+    font-size: 9px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .search button[type="submit"] {
+    background-color: #4e99e9;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 6.8px 15px;
+    border-radius: 20px;
+    font-size: 9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.9s ease;
+  }
+
+  .search button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: blue;
+  }
+  /* end /search */
+  .contact_list ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact_list ul li a {
+    list-style-type: none;
+    padding: 8px 6px;
+    font-size: 9px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    color: #333;
+    line-height: 3;
+  }
+  .contact_list ul li a:hover {
+    background-color: #4e99e9;
+    color: #fff;
+    border-radius: 5px;
+  }
+  /* contact details */
+  .contactDetail-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+  }
+  .coctact-content {
+    display: flex;
+    gap: 10px;
+  }
+  .contact-description h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    margin-bottom: 4px;
+  }
+  .contact-description p {
+    font-size: 7px;
+    margin-bottom: 3px;
+    font-style: italic;
+    font-weight: bold;
+    color: #4e99e9;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .contact-description p:hover {
+    color: blue;
+  }
+  .contact-details {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .img {
+    width: 85px;
+    height: 85px;
+    border-radius: 60px;
+  }
+  /* button */
+  .btn {
+    position: relative;
+    font-size: 8px;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 2px 8px;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  .btn::after {
+    background-color: #fff;
+  }
+
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+  .btn2 {
+    color: red;
+  }
+  .message {
+    text-align: center;
+    font-size: 12px;
+    color: #757575;
+  }
 }
