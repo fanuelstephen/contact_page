@@ -16,13 +16,14 @@ body {
   padding: 0;
   margin: 0;
 }
+.navbar {
+  background-color: #efefef;
+  padding: 30px;
+  text-align: center;
+  overflow: hidden;
+}
 
 @media only screen and (min-width: 320px) {
-  .navbar {
-    background-color: #efefef;
-    padding: 30px;
-    text-align: center;
-  }
   .navbar h1 {
     text-transform: uppercase;
     font-size: 11px;
@@ -60,8 +61,12 @@ body {
     text-align: right;
   }
   .hide {
-    transform: translateX(-228px);
+    transform: translateX(-95px);
     transition: all 0.5s ease-in;
+    margin-left: -2rem;
+    display: grid;
+    grid-column: span 0;
+    background-color: none;
   }
   .show {
     transform: translateX(0px);
@@ -393,5 +398,77 @@ body {
     align-items: center;
     display: flex;
     gap: 20px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .search input[type="text"] {
+    width: 243px;
+    padding: 15px 23px;
+    font-size: 19px;
+  }
+  .search button[type="submit"] {
+    padding: 16.6px 40px;
+    font-size: 16px;
+  }
+  .contact_list ul li a {
+    padding: 9px 9px;
+    font-size: 23px;
+    line-height: 2.1;
+  }
+  .img {
+    width: 280px;
+    height: 280px;
+    border-radius: 139px;
+  }
+  .contact-description h3 {
+    font-size: 33px;
+    margin-bottom: 13px;
+  }
+  .contact-description p {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  .btn {
+    font-size: 20px;
+    padding: 10px 36px;
+  }
+  .contact-details {
+    margin-top: 21px;
+  }
+  .navbar h1 {
+    font-size: 46px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .search input[type="text"] {
+    width: 285px;
+  }
+  .contact_list ul li a {
+    font-size: 36px;
+    line-height: 1.7;
+  }
+  .img {
+    width: 350px;
+    height: 350px;
+    border-radius: 177px;
+  }
+  .contact-description h3 {
+    font-size: 35px;
+    margin-bottom: 13px;
+  }
+  .contact-description p {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+  .btn {
+    font-size: 21px;
+    padding: 10px 40px;
+  }
+  .contact-details {
+    margin-top: 53px;
+  }
+
+  .navbar h1 {
+    font-size: 56px;
   }
 }
